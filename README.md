@@ -38,7 +38,7 @@ Algorithm and programming in C language
 - [x] [queue](https://github.com/DINGDAMU/Datastructure/tree/master/queue)
 - [x] [recursive](https://github.com/DINGDAMU/Datastructure/tree/master/recursive)
 - [x] [recursive and iteration](https://github.com/DINGDAMU/Datastructure/tree/master/recursive_iteration)
-- [x] [sort]()
+- [x] [sort](https://github.com/DINGDAMU/Datastructure/tree/master/sort)
 - [x] [search]() 
 - [x] [binary spanning tree]()
 - [x] [graph]()

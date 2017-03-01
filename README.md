@@ -27,4 +27,17 @@ Algorithm and programming in C language
 
 	damu *.c <argv[1]> <argv[2]> ...
 
+##Topics  
+
+- [x] [array](https://github.com/DINGDAMU/Datastructure/tree/master/array)  
+- [x] [linked list](https://github.com/DINGDAMU/Datastructure/tree/master/linked_list)  
+- [x] [stack](https://github.com/DINGDAMU/Datastructure/tree/master/stack)
+- [x] [queue](https://github.com/DINGDAMU/Datastructure/tree/master/queue)
+- [x] [recursive](https://github.com/DINGDAMU/Datastructure/tree/master/recursive)
+- [x] [recursive and iteration](https://github.com/DINGDAMU/Datastructure/tree/master/recursive_iteration)
+- [x] [sort]()
+- [x] [search]() 
+- [x] [binary spanning tree]()
+- [x] [graph]()
+
    

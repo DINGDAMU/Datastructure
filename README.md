@@ -1,6 +1,9 @@
 # Datastructure
 Algorithm and programming in C language  
 
+## Programming tool  
+[Vim](https://github.com/vim/vim) with [c.vim](https://github.com/vim-scripts/c.vim) plugin
+
 
 ##  How to EASILY compile C language in unix-like system:  
 1.Write a shell script for compile  

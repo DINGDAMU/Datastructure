@@ -17,16 +17,16 @@
 #include    "stdio.h"
 #include    "string.h"
 int count;
-void  hanoi(char*source,char*aux,char*destination,int n){
+void  hanoi(char*source,char*destination,char*aux,int n){
     if(n==1){
         count++;
         printf("This is step%d:",count);
-        printf("move 121disk 1 from %s to %s\n",source,destination);
+        printf("move disk 1 from %s to %s\n",source,destination);
     }else{
         hanoi(source,aux,destination,n-1);
         count++;
         printf("This is step%d:",count);
-        printf("move disk %d from %s to %s\n",n,source,aux);
+        printf("move disk %d from %s to %s\n",n,source,destination);
         hanoi(aux,destination,source,n-1);
     }
 }
@@ -34,6 +34,6 @@ void  hanoi(char*source,char*aux,char*destination,int n){
 int main(int argc, char *argv[])
 {
     count=0;
-    hanoi("A","B","C",3);
+    hanoi("A","C","B",3);
     return 0;
 }

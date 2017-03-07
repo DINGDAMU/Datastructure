@@ -15,15 +15,15 @@
  */
 
 #include    "link_head.h"
-typedef struct _Student_{
+typedef struct __Student__{
     int age;
-    struct _Student_ *next;
+    struct __Student__ *next;
 
-}Student;
+}_Student_;
 int main(int argc, char *argv[])
 {
-    Student*student;
-    student = (Student*)malloc(sizeof(Student));
+    _Student_*student;
+    student = (_Student_*)malloc(sizeof(_Student_));
       if(student==NULL){
         printf("Memory allocate failure!\n");
         return -1;

@@ -19,14 +19,18 @@
 
 int main(int argc, char *argv[])
 {
-    _node_*root;
+    _node_*root,*head;
     root=NULL;
     int position =0;
     while(position<MAX){
     root=createTree(root,array,position);
     position++;
     }
-    insertNode(root,100);
+
+    head=root;
+    root=insert(root,100);
     inorder(root);
-    
+    printf("\n");
+    root=deleteNode(head,33); 
+    inorder(root);
 }

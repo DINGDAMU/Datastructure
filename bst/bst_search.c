@@ -20,7 +20,6 @@ int main(int argc, char *argv[])
 {
     _node_*root=NULL;
     int position=0;
-    int found=0;
     while(position<MAX){
     root=createTree(root,array,position);
     position++;
@@ -28,6 +27,8 @@ int main(int argc, char *argv[])
     preorder(root);
     printf("\n");
     int num =33;
-    found=searchTree(root,num,found);
+    root=searchTree(root,num);
+    printf("\n");
+    inorder(root);
     freeTree(root);
 }

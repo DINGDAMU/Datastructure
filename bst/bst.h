@@ -73,24 +73,24 @@ void postorder(_node_*root){
         printf("%d",root->key);
     }
 }
-int  searchTree(_node_*root,int num,int found){
+_node_*  searchTree(_node_*root,int num){
 
 if(root!=NULL){
     if(root->key==num){
         printf("found %d in bst",num);
-        found=1;
-        return found;
+        return root;
     }else if(num<root->key){
-        searchTree(root->left,num,found);
+        root->left=searchTree(root->left,num);
     }else{
-        searchTree(root->right,num,found);
+        root->right=searchTree(root->right,num);
     }
  }else{
      printf("Not found %d in bst",num);
-     return found;
+     return root;
  }
- return found;   
+ return root;;   
 }
+//insert_iterative
 _node_* insertNode(_node_*root,int value){
     _node_*newnode,*parentnode,*currentnode;
     newnode=(_node_*)malloc(sizeof(_node_));
@@ -116,6 +116,57 @@ _node_* insertNode(_node_*root,int value){
         }
     }
     return root;
+}
+//insert_recursive
+
+_node_*insert(_node_*root,int value){
+    _node_*newnode;
+    newnode=(_node_*)malloc(sizeof(_node_));
+    newnode->key=value;
+    newnode->left=NULL;
+    newnode->right=NULL;
+    if(root==NULL){
+        return newnode;
+    }
+    if(value<root->key){
+        root->left=insert(root->left,value);
+    }else if(value>root->key){
+        root->right=insert(root->right,value);
+    }
+    return root;
+}
+_node_* minValue(_node_*root){
+    _node_*currentnode=root;
+    while(currentnode->left!=NULL){
+          currentnode=currentnode->left;  
+    }
+    return currentnode;
+}
+_node_* deleteNode(_node_*root,int value){
+    _node_*tmp;
+    if (root==NULL){
+        return root;
+    }
+    if(value<root->key){
+        root->left= deleteNode(root->left,value);
+    }else if(value>root->key){
+        root->right=deleteNode(root->right,value);
+    }else{//value==root->key
+          if(root->left==NULL){
+               tmp=root->right;
+               free(root);
+               return tmp;
+        }else if(root->right==NULL){
+            tmp=root->left;
+            free(root);
+            return tmp;
+        }
+        //root has two children
+        tmp = minValue(root->right);
+        root->key=tmp->key;
+        root->right=deleteNode(root->right,tmp->key);
+    }
+     return root;
 }
 _node_* findMax(_node_*root){
     while(root->right!=NULL){

@@ -34,6 +34,6 @@ void  hanoi(char*source,char*destination,char*aux,int n){
 int main(int argc, char *argv[])
 {
     count=0;
-    hanoi("A","C","B",3);
+    hanoi("A","C","B",4);
     return 0;
 }

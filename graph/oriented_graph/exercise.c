@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
 //initialization
     for( int i=0 ; i<MAX ; i++ )
     {
-    node[i]=(_node_*)malloc(MAX*sizeof(_node_));
+    node[i]=(_node_*)malloc(sizeof(_node_));
     head[i]=node[i];
     head2[i]=node[i];
     node[i]->next=NULL;

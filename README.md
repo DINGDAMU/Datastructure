@@ -30,7 +30,7 @@ Algorithm and programming in C language
 
 	damu *.c <argv[1]> <argv[2]> ...
 
-##Topics  
+## Topics  
 
 - [x] [array](https://github.com/DINGDAMU/Datastructure/tree/master/array)  
 - [x] [linked list](https://github.com/DINGDAMU/Datastructure/tree/master/linked_list)  
